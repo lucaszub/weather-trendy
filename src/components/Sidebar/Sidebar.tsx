@@ -1,16 +1,8 @@
 import { Link } from 'react-router-dom';
 // import {Logo} from "/components/logo"
 import {
-    Bell,
-    CircleUser,
+  
     Home,
-    LineChart,
-    Menu,
-    Package,
-    Package2,
-    Search,
-    ShoppingCart,
-    Users,
   } from "lucide-react";
 // ...
 
