@@ -11,7 +11,6 @@ import DatePicker from "@/components/DatePicker";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -142,7 +141,7 @@ const Tendances: React.FC = () => {
           </Card>
         </div>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-2 mb-3 mt-5">
-          
+
           <Chart />
           <Component />
           
