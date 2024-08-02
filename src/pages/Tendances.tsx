@@ -51,14 +51,14 @@ const Tendances: React.FC = () => {
             </Select>
           </div>
           <div className="flex flex-col gap-y-2 lg:gap-y-1">
-            <Label htmlFor="subcategory">Subcategory (optional)</Label>
+            <Label htmlFor="subcategory">Votre Département</Label>
             <Select>
               <SelectTrigger
-                id="subcategory"
-                aria-label="Select subcategory"
+                id="Votre Département"
+                aria-label="Votre Département"
                 className="border border-gray-300 rounded-lg"
               >
-                <SelectValue placeholder="Select subcategory" />
+                <SelectValue placeholder="Votre Département" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="t-shirts">T-Shirts</SelectItem>
@@ -86,57 +86,49 @@ const Tendances: React.FC = () => {
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">
-                Total Revenue
+                Température Maximal 
               </CardTitle>
               <DollarSign className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">$45,231.89</div>
-              <p className="text-xs text-muted-foreground">
-                +20.1% from last month
-              </p>
+              <div className="text-2xl font-bold">24°C</div>
+              
             </CardContent>
           </Card>
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">
-                Total Revenue
+                Température Minimum
               </CardTitle>
               <DollarSign className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">$45,231.89</div>
-              <p className="text-xs text-muted-foreground">
-                +20.1% from last month
-              </p>
+              <div className="text-2xl font-bold">8°C</div>
+              
             </CardContent>
           </Card>
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">
-                Total Revenue
+                Température Moyenne
               </CardTitle>
               <DollarSign className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">$45,231.89</div>
-              <p className="text-xs text-muted-foreground">
-                +20.1% from last month
-              </p>
+              <div className="text-2xl font-bold">14°C</div>
+              
             </CardContent>
           </Card>
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">
-                Total Revenue
+                Précipitation
               </CardTitle>
               <DollarSign className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">$45,231.89</div>
-              <p className="text-xs text-muted-foreground">
-                +20.1% from last month
-              </p>
+              <div className="text-2xl font-bold">223 mm</div>
+             
             </CardContent>
           </Card>
         </div>
