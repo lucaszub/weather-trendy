@@ -25,6 +25,12 @@ const chartData = [
   { month: "April", precipitation: 53 },
   { month: "May", precipitation: 61 },
   { month: "June", precipitation: 67 },
+  { month: "July", precipitation: 73 },
+  { month: "August", precipitation: 65 },
+  { month: "September", precipitation: 58 },
+  { month: "October", precipitation: 50 },
+  { month: "November", precipitation: 46 },
+  { month: "December", precipitation: 51 },
 ]
 
 const chartConfig = {
@@ -39,7 +45,7 @@ export function Chart() {
     <Card>
       <CardHeader>
         <CardTitle>Graphique des Précipitations</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardDescription>Janvier - Décembre 2024</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
@@ -78,7 +84,7 @@ export function Chart() {
           Augmentation de 5.2% ce mois-ci <TrendingUp className="h-4 w-4" />
         </div>
         <div className="leading-none text-muted-foreground">
-          Affichage des précipitations totales pour les 6 derniers mois
+          Affichage des précipitations totales pour l'année 2024
         </div>
       </CardFooter>
     </Card>
