@@ -17,20 +17,19 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
+
 const chartData = [
-  { month: "January", desktop: 186 },
-  { month: "February", desktop: 305 },
-  { month: "March", desktop: 237 },
-  { month: "April", desktop: 73 },
-  { month: "May", desktop: 209 },
-  { month: "June", desktop: 214 },
+  { month: "January", precipitation: 55 },
+  { month: "February", precipitation: 42 },
+  { month: "March", precipitation: 47 },
+  { month: "April", precipitation: 53 },
+  { month: "May", precipitation: 61 },
+  { month: "June", precipitation: 67 },
 ]
 
-
-
 const chartConfig = {
-  desktop: {
-    label: "Desktop",
+  precipitation: {
+    label: "Précipitations",
     color: "hsl(var(--chart-1))",
   },
 } satisfies ChartConfig
@@ -39,7 +38,7 @@ export function Chart() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Bar Chart - Label</CardTitle>
+        <CardTitle>Graphique des Précipitations</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
       </CardHeader>
       <CardContent>
@@ -63,7 +62,7 @@ export function Chart() {
               cursor={false}
               content={<ChartTooltipContent hideLabel />}
             />
-            <Bar dataKey="desktop" fill="var(--color-desktop)" radius={8}>
+            <Bar dataKey="precipitation" fill="hsl(var(--chart-1))" radius={8}>
               <LabelList
                 position="top"
                 offset={12}
@@ -76,10 +75,10 @@ export function Chart() {
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
         <div className="flex gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+          Augmentation de 5.2% ce mois-ci <TrendingUp className="h-4 w-4" />
         </div>
         <div className="leading-none text-muted-foreground">
-          Showing total visitors for the last 6 months
+          Affichage des précipitations totales pour les 6 derniers mois
         </div>
       </CardFooter>
     </Card>
