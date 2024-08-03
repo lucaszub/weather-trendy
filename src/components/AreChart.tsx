@@ -17,26 +17,33 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
+
 const chartData = [
-  { month: "January", desktop: 186, mobile: 80, other: 45 },
-  { month: "February", desktop: 305, mobile: 200, other: 100 },
-  { month: "March", desktop: 237, mobile: 120, other: 150 },
-  { month: "April", desktop: 73, mobile: 190, other: 50 },
-  { month: "May", desktop: 209, mobile: 130, other: 100 },
-  { month: "June", desktop: 214, mobile: 140, other: 160 },
-]
+    { month: "January", temperature_moyenne: 5, temperature_max: 7, temperature_min: 3 },
+    { month: "February", temperature_moyenne: 6, temperature_max: 8, temperature_min: 3 },
+    { month: "March", temperature_moyenne: 9, temperature_max: 12, temperature_min: 6 },
+    { month: "April", temperature_moyenne: 12, temperature_max: 16, temperature_min: 8 },
+    { month: "May", temperature_moyenne: 16, temperature_max: 20, temperature_min: 12 },
+    { month: "June", temperature_moyenne: 19, temperature_max: 23, temperature_min: 15 },
+    { month: "July", temperature_moyenne: 22, temperature_max: 26, temperature_min: 18 },
+    { month: "August", temperature_moyenne: 21, temperature_max: 25, temperature_min: 17 },
+    { month: "September", temperature_moyenne: 18, temperature_max: 22, temperature_min: 14 },
+    { month: "October", temperature_moyenne: 14, temperature_max: 17, temperature_min: 11 },
+    { month: "November", temperature_moyenne: 9, temperature_max: 11, temperature_min: 6 },
+    { month: "December", temperature_moyenne: 6, temperature_max: 8, temperature_min: 3 }
+];
 
 const chartConfig = {
-  desktop: {
-    label: "Desktop",
+  temperature_moyenne: {
+    label: "Temp Moyenne",
     color: "hsl(var(--chart-1))",
   },
-  mobile: {
-    label: "Mobile",
+  temperature_max: {
+    label: "Temp Max",
     color: "hsl(var(--chart-2))",
   },
-  other: {
-    label: "Other",
+  temperature_min: {
+    label: "Temp Min",
     color: "hsl(var(--chart-3))",
   },
 } satisfies ChartConfig
@@ -45,9 +52,9 @@ export function Component() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Area Chart - Stacked Expanded</CardTitle>
+        <CardTitle>Graphique des Températures</CardTitle>
         <CardDescription>
-          Showing total visitors for the last 6months
+          Températures moyennes, maximales et minimales à Paris pour l'année 2024
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -60,7 +67,6 @@ export function Component() {
               right: 12,
               top: 12,
             }}
-            stackOffset="expand"
           >
             <CartesianGrid vertical={false} />
             <XAxis
@@ -75,27 +81,27 @@ export function Component() {
               content={<ChartTooltipContent indicator="line" />}
             />
             <Area
-              dataKey="other"
+              dataKey="temperature_moyenne"
               type="natural"
-              fill="var(--color-other)"
+              fill="hsl(var(--chart-1))"
               fillOpacity={0.1}
-              stroke="var(--color-other)"
+              stroke="hsl(var(--chart-1))"
               stackId="a"
             />
             <Area
-              dataKey="mobile"
+              dataKey="temperature_max"
               type="natural"
-              fill="var(--color-mobile)"
+              fill="hsl(var(--chart-2))"
               fillOpacity={0.4}
-              stroke="var(--color-mobile)"
+              stroke="hsl(var(--chart-2))"
               stackId="a"
             />
             <Area
-              dataKey="desktop"
+              dataKey="temperature_min"
               type="natural"
-              fill="var(--color-desktop)"
+              fill="hsl(var(--chart-3))"
               fillOpacity={0.4}
-              stroke="var(--color-desktop)"
+              stroke="hsl(var(--chart-3))"
               stackId="a"
             />
           </AreaChart>
@@ -105,10 +111,10 @@ export function Component() {
         <div className="flex w-full items-start gap-2 text-sm">
           <div className="grid gap-2">
             <div className="flex items-center gap-2 font-medium leading-none">
-              Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+              Températures <TrendingUp className="h-4 w-4" />
             </div>
             <div className="flex items-center gap-2 leading-none text-muted-foreground">
-              January - June 2024
+              January - Décember 2024
             </div>
           </div>
         </div>
