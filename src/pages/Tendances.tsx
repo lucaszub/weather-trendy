@@ -88,7 +88,6 @@ const Tendances: React.FC = () => {
               <CardTitle className="text-sm font-medium">
                 Température Maximal 
               </CardTitle>
-              <DollarSign className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">24°C</div>
@@ -100,7 +99,6 @@ const Tendances: React.FC = () => {
               <CardTitle className="text-sm font-medium">
                 Température Minimum
               </CardTitle>
-              <DollarSign className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">8°C</div>
@@ -112,7 +110,6 @@ const Tendances: React.FC = () => {
               <CardTitle className="text-sm font-medium">
                 Température Moyenne
               </CardTitle>
-              <DollarSign className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">14°C</div>
@@ -124,7 +121,6 @@ const Tendances: React.FC = () => {
               <CardTitle className="text-sm font-medium">
                 Précipitation
               </CardTitle>
-              <DollarSign className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">223 mm</div>
