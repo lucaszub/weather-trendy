@@ -14,7 +14,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { DollarSign } from "lucide-react";
 import {Component} from "../components/AreChart"
 import { Chart } from "@/components/Chart";
 
